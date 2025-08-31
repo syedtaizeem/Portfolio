@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         {
                             category: 'Core Responsibilities & Achievements',
                             points: [
-                                'Extracted, cleaned, and modeled large datasets in SQL and Python to track operational KPIs.',
+                                'Performed data extraction, transformation, and validation with 98%+ accuracy to support compliance and operational processes',
                                 'Built real-time Power BI dashboards to monitor productivity, enabling faster and more informed decision-making.',
                                 'Developed documented data workflows to standardize processes across teams, improving operational efficiency.',
                                 'Consistently performed well and was promoted within two quarters.'
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         startTypingAnimation() {
             if (!this.elements.typingText) return;
-            const roles = ['Data Analyst', 'BI Developer', 'Data Storyteller'];
+            const roles = ['Data Analyst', 'BI Analyst', 'Data Storyteller','Sales Operations Analyst'];
             let roleIndex = 0, charIndex = 0, isDeleting = false;
             const type = () => {
                 const currentRole = roles[roleIndex];
@@ -264,9 +264,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!this.elements.toolkitContainer) return;
             this.elements.toolkitContainer.className = 'toolkit-accordion';
             let html = '';
-            Object.keys(this.data.toolkit).forEach((category, categoryIndex) => {
-                const isOpen = categoryIndex === 0 ? 'open' : '';
-                html += `<details ${isOpen}><summary>${category}</summary><div class="toolkit-grid">`;
+            Object.keys(this.data.toolkit).forEach((category) => {
+                html += `<details><summary>${category}</summary><div class="toolkit-grid">`;
                 let cardIndex = 0; // Reset card index for each category for staggered animation
                 this.data.toolkit[category].forEach(skill => {
                     html += `<div class="skill-card" style="--delay: ${cardIndex * 30}ms"><i class="${skill.icon}"></i><span>${skill.name}</span></div>`;
@@ -308,10 +307,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 navHTML += `<li class="journey-nav-item"><button data-journey-id="${item.id}" role="tab" aria-controls="journey-${item.id}" aria-selected="${index === 0}"><img src="${item.logo}" alt="${item.company} logo" loading="lazy" width="60" height="60"><span>${item.company}</span></button></li>`;
                 let accomplishmentsHTML = '<div class="journey-accordion">';
                 if (item.accomplishments) {
-                    item.accomplishments.forEach((group, groupIndex) => {
-                        const isOpen = groupIndex === 0 ? 'open' : '';
+                    item.accomplishments.forEach((group) => {
                         accomplishmentsHTML += `
-                            <details ${isOpen}>
+                            <details>
                                 <summary>${group.category}</summary>
                                 <div class="accomplishment-group">
                                     ${group.points.map(point => `<div class="accomplishment-item">${point}</div>`).join('')}
