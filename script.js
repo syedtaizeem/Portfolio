@@ -8,28 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     { name: 'SQL', icon: 'fas fa-database' },
                     { name: 'R', icon: 'fab fa-r-project' },
                     { name: 'SAS', icon: 'fas fa-cogs' },
-                    { name: 'Data Analysis', icon: 'fas fa-magnifying-glass-chart' },
                     { name: 'Predictive Modelling', icon: 'fas fa-brain' },
-                    { name: 'Statistical Modelling', icon: 'fas fa-chart-line' },
-                    { name: 'ETL/ELT', icon: 'fas fa-retweet' },
-                    { name: 'Data Warehousing', icon: 'fas fa-warehouse' },
+                    { name: 'Forecasting', icon: 'fas fa-wand-magic-sparkles' },
+                    { name: 'EDA', icon: 'fas fa-chart-bar' },
                     { name: 'A/B Testing', icon: 'fas fa-vial' },
-                    { name: 'Regression', icon: 'fas fa-square-root-variable' },
+                    { name: 'Linear Regression', icon: 'fas fa-square-root-variable' },
                 ],
                 "Business Intelligence & Visualization": [
                     { name: 'Power BI', icon: 'fas fa-chart-bar' },
                     { name: 'Tableau', icon: 'fas fa-chart-pie' },
-                    { name: 'Qlik Sense', icon: 'fas fa-chart-simple' },
-                    { name: 'Looker', icon: 'fas fa-binoculars' },
-                    { name: 'Excel', icon: 'fas fa-file-excel' },
+                    { name: 'Salesforce', icon: 'fab fa-salesforce' },
+                    { name: 'Advanced MS Excel', icon: 'fas fa-file-excel' },
                 ],
                 "Data Engineering & Tools": [
                     { name: 'ETL Pipelines', icon: 'fas fa-stream' },
-                    { name: 'Data Quality', icon: 'fas fa-check-double' },
-                    { name: 'Forecasting', icon: 'fas fa-wand-magic-sparkles' },
-                    { name: 'Salesforce', icon: 'fab fa-salesforce' },
-                    { name: 'Jupyter', icon: 'fab fa-python' },
-                    { name: 'Git/GitHub', icon: 'fab fa-github' },
+                    { name: 'Data Validation', icon: 'fas fa-check-double' },
+                    { name: 'Data Warehousing', icon: 'fas fa-warehouse' },
                 ],
                 "Machine Learning & Analytics": [
                     { name: 'Forecasting', icon: 'fas fa-chart-line' },
@@ -57,24 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
                         {
                             category: 'Analytics & Reporting',
                             points: [
-                                'Designed interactive Power BI dashboards with advanced DAX, achieving a 15% cost reduction and 10% profit increase through improved forecasting and resource allocation.',
+                                'Designed Salesforce reports and interactive Power BI dashboards with advanced DAX, achieving a 15% cost reduction and 10% profit increase through improved forecasting and resource allocation.',
                                 'Prepared weekly forecasts, churn, and trend reports, providing actionable insights that guided strategic decision-making and boosted sales performance.',
-                                'Delivered high-level reports to Executive Management, translating complex data into clear, actionable insights.'
+                                'Delivered high-level reports to Management, translating complex data into clear, actionable insights.'
                             ]
                         },
                         {
                             category: 'Process, Collaboration & Tools',
                             points: [
-                                'Partnered with product and engineering teams to embed reporting into ERP workflows, streamlining processes and improving cross-team collaboration.',
                                 'Maintained Salesforce data integrity, supporting smooth communication between business areas and enabling data-driven decisions.',
                                 'Served as a subject-matter expert for the quote-to-contract process, delivering training and implementing support tools to improve deal quality.',
                                 'Created a centralized knowledge base in SharePoint from scratch, standardizing documentation and ensuring easy access to processes, reports, and best practices across teams.'
                             ]
                         },
                         {
-                            category: 'Client Management & Advanced Projects',
+                            category: 'Advanced Projects',
                             points: [
-                                'Built and nurtured key client relationships, identifying opportunities for upselling and cross-selling while ensuring high satisfaction and retention.',
                                 'Currently developing a machine learning forecasting model for MSc dissertation, applying predictive analytics to enhance sales planning.'
                             ]
                         }
@@ -200,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.populateProjects();
             this.setupJourneyInteraction();
             this.setupProjectModal();
+            this.setupToolkitInteraction(); // Call the new function
         },
 
         applyInitialTheme() {
@@ -216,9 +209,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         toggleMobileMenu() {
             const isOpened = this.elements.navLinks.classList.toggle('active');
+            const icon = this.elements.mobileMenuToggle.querySelector('i');
             this.elements.mobileMenuToggle.setAttribute('aria-expanded', isOpened);
-            this.elements.mobileMenuToggle.querySelector('i').classList.toggle('fa-bars');
-            this.elements.mobileMenuToggle.querySelector('i').classList.toggle('fa-times');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
             document.body.style.overflow = isOpened ? 'hidden' : '';
         },
 
@@ -264,19 +258,46 @@ document.addEventListener('DOMContentLoaded', () => {
             this.elements.sections.forEach(section => observer.observe(section));
         },
 
+        // ** CORRECTED AND MOVED FUNCTIONS START HERE **
+
         populateToolkit() {
             if (!this.elements.toolkitContainer) return;
+            this.elements.toolkitContainer.className = 'toolkit-accordion';
             let html = '';
-            let cardIndex = 0;
-            for (const category in this.data.toolkit) {
-                html += `<div class="toolkit-category-header">${category}</div>`;
+            Object.keys(this.data.toolkit).forEach((category, categoryIndex) => {
+                const isOpen = categoryIndex === 0 ? 'open' : '';
+                html += `<details ${isOpen}><summary>${category}</summary><div class="toolkit-grid">`;
+                let cardIndex = 0; // Reset card index for each category for staggered animation
                 this.data.toolkit[category].forEach(skill => {
                     html += `<div class="skill-card" style="--delay: ${cardIndex * 30}ms"><i class="${skill.icon}"></i><span>${skill.name}</span></div>`;
                     cardIndex++;
                 });
-            }
+                html += `</div></details>`;
+            });
             this.elements.toolkitContainer.innerHTML = html;
         },
+
+        setupToolkitInteraction() {
+            const { toolkitContainer } = this.elements;
+            if (!toolkitContainer) return;
+
+            toolkitContainer.addEventListener('click', (e) => {
+                const summary = e.target.closest('summary');
+                if (summary) {
+                    e.preventDefault();
+                    const detailElement = summary.parentElement;
+
+                    if (detailElement.hasAttribute('open')) {
+                        detailElement.removeAttribute('open');
+                    } else {
+                        toolkitContainer.querySelectorAll('details').forEach(d => d.removeAttribute('open'));
+                        detailElement.setAttribute('open', '');
+                    }
+                }
+            });
+        },
+        
+        // ** CORRECTED AND MOVED FUNCTIONS END HERE **
         
         populateJourney() {
             const { journeyContainer } = this.elements;
@@ -285,16 +306,20 @@ document.addEventListener('DOMContentLoaded', () => {
             let contentHTML = '<div class="journey-content-panel">';
             this.data.journey.forEach((item, index) => {
                 navHTML += `<li class="journey-nav-item"><button data-journey-id="${item.id}" role="tab" aria-controls="journey-${item.id}" aria-selected="${index === 0}"><img src="${item.logo}" alt="${item.company} logo" loading="lazy" width="60" height="60"><span>${item.company}</span></button></li>`;
-                let accomplishmentsHTML = '';
+                let accomplishmentsHTML = '<div class="journey-accordion">';
                 if (item.accomplishments) {
-                    item.accomplishments.forEach(group => {
-                        accomplishmentsHTML += `<div class="accomplishment-group"><h4>${group.category}</h4>`;
-                        group.points.forEach(point => {
-                            accomplishmentsHTML += `<div class="accomplishment-item">${point}</div>`;
-                        });
-                        accomplishmentsHTML += `</div>`;
+                    item.accomplishments.forEach((group, groupIndex) => {
+                        const isOpen = groupIndex === 0 ? 'open' : '';
+                        accomplishmentsHTML += `
+                            <details ${isOpen}>
+                                <summary>${group.category}</summary>
+                                <div class="accomplishment-group">
+                                    ${group.points.map(point => `<div class="accomplishment-item">${point}</div>`).join('')}
+                                </div>
+                            </details>`;
                     });
                 }
+                accomplishmentsHTML += '</div>';
                 contentHTML += `<div class="journey-detail" id="journey-${item.id}" data-journey-id="${item.id}" role="tabpanel"><h3>${item.title}</h3><p class="company">${item.company}</p><p class="date">${item.date}</p>${accomplishmentsHTML}</div>`;
             });
             navHTML += '</ul>';
@@ -311,17 +336,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
             journeyContainer.addEventListener('click', (e) => {
                 const button = e.target.closest('button');
-                if (!button) return;
-                const id = button.dataset.journeyId;
-                const targetDetail = journeyContainer.querySelector(`.journey-detail[data-journey-id="${id}"]`);
-                journeyContainer.querySelectorAll('.journey-nav-item button').forEach(btn => { btn.classList.remove('active'); btn.setAttribute('aria-selected', 'false'); });
-                button.classList.add('active');
-                button.setAttribute('aria-selected', 'true');
-                journeyContainer.querySelectorAll('.journey-detail').forEach(detail => detail.classList.remove('active'));
-                
-                if (targetDetail) {
-                    targetDetail.classList.add('active');
-                    contentPanel.scrollTo({ top: 0, behavior: 'smooth' });
+                if (button) {
+                    const id = button.dataset.journeyId;
+                    const targetDetail = journeyContainer.querySelector(`.journey-detail[data-journey-id="${id}"]`);
+                    journeyContainer.querySelectorAll('.journey-nav-item button').forEach(btn => { btn.classList.remove('active'); btn.setAttribute('aria-selected', 'false'); });
+                    button.classList.add('active');
+                    button.setAttribute('aria-selected', 'true');
+                    journeyContainer.querySelectorAll('.journey-detail').forEach(detail => detail.classList.remove('active'));
+                    
+                    if (targetDetail) {
+                        targetDetail.classList.add('active');
+                        contentPanel.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }
+
+                const summary = e.target.closest('summary');
+                if (summary) {
+                    e.preventDefault();
+                    const detailElement = summary.parentElement;
+                    const accordion = summary.closest('.journey-accordion');
+                    
+                    if (detailElement.hasAttribute('open')) {
+                        detailElement.removeAttribute('open');
+                    } else {
+                        accordion.querySelectorAll('details').forEach(d => d.removeAttribute('open'));
+                        detailElement.setAttribute('open', '');
+                    }
                 }
             });
         },
@@ -331,6 +371,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!projectsContainer) return;
             projectsContainer.innerHTML = this.data.projects.map(project => {
                 const tagsHTML = project.tags.map(tag => `<span class="tag"><i class="${tag.icon}"></i> ${tag.name}</span>`).join('');
+                let buttonsHTML = `<button class="btn btn-primary" data-project-id="${project.id}"><i class="fas fa-eye"></i> View Case Study</button>`;
+                if (project.links.ppt || project.links.report) {
+                    const downloadLink = project.links.ppt || project.links.report;
+                    const buttonText = project.links.ppt ? "Download PDF" : "Download Report";
+                    buttonsHTML += `<a href="${downloadLink}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" download><i class="fas fa-file-pdf"></i> ${buttonText}</a>`;
+                }
+                
                 return `
                     <div class="project-card">
                         <div class="project-image-wrapper"><img src="${project.image}" alt="${project.title}" class="project-image" loading="lazy" width="1200" height="900"></div>
@@ -338,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h3>${project.title}</h3>
                             <p>${project.summary}</p>
                             <div class="project-tags">${tagsHTML}</div>
-                            <button class="btn btn-primary" data-project-id="${project.id}">View Case Study</button>
+                            <div class="project-buttons">${buttonsHTML}</div>
                         </div>
                     </div>`;
             }).join('');
