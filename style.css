@@ -892,7 +892,6 @@ nav.scrolled {
     color: var(--text-color);
 }
 
-/* NEW: Styles for the expanders */
 .journey-expanders {
     display: flex;
     flex-direction: column;
@@ -917,7 +916,7 @@ nav.scrolled {
     color: var(--heading-color);
     padding: 1rem 1.5rem;
     cursor: pointer;
-    list-style: none; /* Hide default arrow */
+    list-style: none;
     position: relative;
     transition: color var(--transition-fast);
 }
@@ -1477,10 +1476,10 @@ footer p {
         padding: 1.25rem 1.5rem;
         justify-content: flex-start;
         border-radius: 0;
-        font-weight: 700; /* NEW: Bolder font on desktop */
+        font-weight: 700;
     }
     
-    .journey-nav-item span {
+   .journey-nav-item span {
         display: block;
         background: none;
         -webkit-background-clip: initial;
@@ -1495,10 +1494,9 @@ footer p {
     .journey-nav-item.active {
         border-left-color: transparent;
         border-bottom-color: transparent;
-        background: linear-gradient(90deg, rgba(34, 211, 238, 0.1), transparent);
+        background: linear-gradient(90deg, rgba(34, 211, 238, 0.05), transparent);
     }
     
-    /* NEW: Dynamic color change for active sidebar item */
     @keyframes gradient-animate {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
