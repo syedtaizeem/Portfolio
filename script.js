@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 { 
                     id: 'inmode', 
                     type: 'work', 
-                    title: 'Sales Operations Analyst Intern (EMEA)', 
+                    title: 'Data & Operations Analyst Intern (EMEA)', 
                     company: 'InMode UK', 
-                    date: 'Jan 2023 – Present', 
+                    date: 'Jan 2025 – Present', 
                     logo: 'assets/inmode-logo.png',
                     accomplishments: [
                         { category: 'Analytics & Reporting', points: ['Designed Salesforce reports and interactive Power BI dashboards with advanced DAX, achieving a 15% cost reduction and 10% profit increase through improved forecasting and resource allocation.', 'Prepared weekly forecasts, churn, and trend reports, providing actionable insights that guided strategic decision-making and boosted sales performance.', 'Delivered high-level reports to Management, translating complex data into clear, actionable insights.'] },
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     type: 'education',
                     title: 'MSc, Big Data Analytics',
                     company: 'Sheffield Hallam University',
-                    date: 'Sep 2022 – Jan 2024',
+                    date: 'Jan 2025 – Jan 2026',
                     logo: 'assets/shu-logo.png',
                     accomplishments: [ 
                         { category: 'Leadership & Representation', points: ['Served as a Course Representative, acting as a key bridge between faculty and the student body to communicate feedback and improve the academic experience.'] },
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     type: 'work', 
                     title: 'Junior Analyst – ID & V', 
                     company: 'Revolut', 
-                    date: 'Feb 2022 – Dec 2022', 
+                    date: 'Feb 2024 – Dec 2024', 
                     logo: 'assets/revolut-logo.png', 
                     accomplishments: [ 
                         { category: 'Process Optimization & Collaboration', points: [
@@ -100,15 +100,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 { 
                     id: 'msc-capstone', 
                     image: 'assets/project-capstone.webp', 
-                    title: 'Multi-Industry Analytics Sprint', 
-                    summary: 'A collection of solutions to critical business problems across four distinct industries: Retail, Real Estate, Insurance, and Finance completed as part of my MSc Big Data Analytics program.', 
+                    title: 'Data-Driven Business Solutions: A Case Study Portfolio', 
+                    summary: 'A collection of four diverse case studies from my MSc in Big Data Analytics, demonstrating the application of advanced statistical methods to solve real-world business challenges in Retail, Real Estate, Insurance, and Finance.', 
                     tags: [
                         {name: 'SAS', icon: 'fas fa-cogs'}, 
                         {name: 'Hypothesis Testing', icon: 'fas fa-vial'}, 
                         {name: 'Regression', icon: 'fas fa-chart-line'}, 
                         {name: 'Business Strategy', icon: 'fas fa-lightbulb'}
                     ], 
-                    challenge: 'The core challenge was to simulate a high-pressure consulting environment by embedding into four distinct and unfamiliar industries: Retail, Real Estate, Insurance, and Finance. In each scenario, I was tasked with moving beyond academic theory to solve a pressing business problem under a tight deadline. The goal was to translate ambiguous, real-world questions into a precise analytical strategy and deliver actionable recommendations with clear financial and strategic consequences.', 
+                    challenge: 'The primary challenge was to bridge the gap between academic theory and business reality. Across four distinct industries, I was tasked with translating ambiguous business questions into testable hypotheses, applying the correct analytical frameworks, and delivering clear, data-driven recommendations that had tangible financial and strategic implications.', 
                     process: [
                         '**Retail ROI Analysis:** Used Hypothesis Testing (T-tests & Wilcoxon) in SAS to evaluate the financial impact of a new sales training program, providing a clear "Go/No-Go" decision to prevent a costly, ineffective company-wide rollout.',
                         '**Real Estate Investment Modeling:** Built a Multiple Regression model to identify the key drivers of property income. This replaced a slow, subjective survey process with a rapid, data-driven tool for screening potential investments.',
@@ -166,7 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
             this.populateAllSections();
             this.startTypingAnimation();
             this.initIntersectionObserver();
-            this.applyInitialTheme();
             this.setupParticleBackground();
         },
 
@@ -212,14 +211,8 @@ document.addEventListener('DOMContentLoaded', () => {
             this.elements.scrollProgress.style.width = `${scrollPercentage}%`;
         },
 
-        applyInitialTheme() {
-            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            document.body.classList.toggle('dark-mode', savedTheme === 'dark');
-            this.elements.themeToggle.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        },
-
         toggleTheme() {
-            const isDark = document.body.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.toggle('dark-mode');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
             this.elements.themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
         },
@@ -517,7 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         let distance = ((particlesArray[a].x - particlesArray[b].x) ** 2) + ((particlesArray[a].y - particlesArray[b].y) ** 2);
                         if (distance < (canvas.width / 8) * (canvas.height / 8)) {
                             opacity = 1 - (distance / 20000);
-                            const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+                            const currentTheme = document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light';
                             const borderColorHex = getComputedStyle(document.documentElement).getPropertyValue(`--border-color-${currentTheme}`).trim();
                             const borderColorRgb = self.hexToRgb(borderColorHex);
                             if (borderColorRgb) {
