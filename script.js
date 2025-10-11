@@ -45,72 +45,79 @@ document.addEventListener('DOMContentLoaded', () => {
                     type: 'work', 
                     title: 'Sales Operations Analyst Intern (EMEA)', 
                     company: 'InMode UK', 
-                    date: 'Jan 2025 – Present', 
-                    logo: 'assets/inmode-logo.png', 
+                    date: 'Jan 2023 – Present', 
+                    logo: 'assets/inmode-logo.png',
                     accomplishments: [
-                        {
-                            category: 'Analytics & Reporting',
-                            points: [
-                                'Designed Salesforce reports and interactive Power BI dashboards with advanced DAX, achieving a 15% cost reduction and 10% profit increase through improved forecasting and resource allocation.',
-                                'Prepared weekly forecasts, churn, and trend reports, providing actionable insights that guided strategic decision-making and boosted sales performance.',
-                                'Delivered high-level reports to Management, translating complex data into clear, actionable insights.'
-                            ]
-                        },
-                        {
-                            category: 'Process, Collaboration & Tools',
-                            points: [
-                                'Maintained Salesforce data integrity, supporting smooth communication between business areas and enabling data-driven decisions.',
-                                'Served as a subject-matter expert for the quote-to-contract process, delivering training and implementing support tools to improve deal quality.',
-                                'Created a centralized knowledge base in SharePoint from scratch, standardizing documentation and ensuring easy access to processes, reports, and best practices across teams.'
-                            ]
-                        },
-                        {
-                            category: 'Advanced Projects',
-                            points: [
-                                'Currently developing a machine learning forecasting model for MSc dissertation, applying predictive analytics to enhance sales planning.'
-                            ]
-                        }
+                        { category: 'Analytics & Reporting', points: ['Designed Salesforce reports and interactive Power BI dashboards with advanced DAX, achieving a 15% cost reduction and 10% profit increase through improved forecasting and resource allocation.', 'Prepared weekly forecasts, churn, and trend reports, providing actionable insights that guided strategic decision-making and boosted sales performance.', 'Delivered high-level reports to Management, translating complex data into clear, actionable insights.'] },
+                        { category: 'Process, Collaboration & Tools', points: ['Maintained Salesforce data integrity, supporting smooth communication between business areas and enabling data-driven decisions.', 'Served as a subject-matter expert for the quote-to-contract process, delivering training and implementing support tools to improve deal quality.', 'Created a centralized knowledge base in SharePoint from scratch, standardizing documentation and ensuring easy access to processes, reports, and best practices across teams.'] },
+                        { category: 'Advanced Projects', points: ['Currently developing a machine learning forecasting model for MSc dissertation, applying predictive analytics to enhance sales planning.'] }
                     ] 
-                },
-                { 
-                    id: 'revolut', 
-                    type: 'work', 
-                    title: 'Junior Analyst – ID & V', 
-                    company: 'Revolut', 
-                    date: 'Feb 2024 – Dec 2024', 
-                    logo: 'assets/revolut-logo.png', 
-                    accomplishments: [
-                        {
-                            category: 'Core Responsibilities & Achievements',
-                            points: [
-                                'Performed data extraction, transformation, and validation with 98%+ accuracy to support compliance and operational processes',
-                                'Built real-time Power BI dashboards to monitor productivity, enabling faster and more informed decision-making.',
-                                'Developed documented data workflows to standardize processes across teams, improving operational efficiency.',
-                                'Consistently performed well and was promoted within two quarters.'
-                            ]
-                        }
-                    ]
                 },
                 {
                     id: 'shu',
                     type: 'education',
                     title: 'MSc, Big Data Analytics',
                     company: 'Sheffield Hallam University',
-                    date: 'Jan 2025 – Jan 2026',
+                    date: 'Sep 2022 – Jan 2024',
                     logo: 'assets/shu-logo.png',
-                    accomplishments: [
-                        {
-                            category: 'Key Modules & Coursework',
-                            points: [
-                                'Specialized in advanced Machine Learning techniques, including deep learning and NLP.',
-                                'Gained hands-on experience with Cloud Computing platforms and big data technologies.',
-                                'Completed coursework in advanced Statistical Modelling and Data Warehousing.'
-                            ]
-                        }
+                    accomplishments: [ 
+                        { category: 'Leadership & Representation', points: ['Served as a Course Representative, acting as a key bridge between faculty and the student body to communicate feedback and improve the academic experience.'] },
+                        { category: 'Key Modules & Grades', points: [
+                            'Programming Concepts and Practice: 8.6',
+                            'Data Analytics Tools and Techniques: 7.6',
+                            'Advanced Data Management Project: 7.2',
+                            'Study Skills for Computing: 6.4'
+                        ]},
+                        { category: 'Core Coursework', points: ['Specialized in advanced Machine Learning techniques, including deep learning and NLP.', 'Gained hands-on experience with Cloud Computing platforms and big data technologies.', 'Completed coursework in advanced Statistical Modelling and Data Warehousing.'] } 
+                    ]
+                },
+                { 
+                    id: 'revolut', 
+                    type: 'work', 
+                    title: 'Junior Analyst – ID & V', 
+                    company: 'Revolut', 
+                    date: 'Feb 2022 – Dec 2022', 
+                    logo: 'assets/revolut-logo.png', 
+                    accomplishments: [ 
+                        { category: 'Process Optimization & Collaboration', points: [
+                            'Standardized reporting formats and optimized workflows using Jira and Confluence, improving data quality and operational efficiency.',
+                            'Collaborated with global teams to design scalable data processes that supported risk analysis and business operations.',
+                            'Facilitated cross-team communication to streamline operational procedures and enhance overall compliance adherence.'
+                        ]},
+                        { category: 'Data Analysis and Reporting', points: [
+                            'Extracted, transformed, and validated operational and compliance data with 98%+ accuracy.',
+                            'Built real-time dashboards in Power BI and Looker to monitor productivity and operational performance.',
+                            'Automated repetitive reporting tasks, reducing manual workload by 20% and improving efficiency.'
+                        ]},
+                        { category: 'Stakeholder Collaboration & Knowledge Sharing', points: [
+                            'Delivered actionable insights to stakeholders, enabling data-driven decisions across risk, compliance, and operations functions.',
+                            'Provided guidance and support to team members on reporting tools and dashboards, improving team productivity and understanding of operational metrics.'
+                        ]}
                     ]
                 }
             ],
             projects: [
+                { 
+                    id: 'msc-capstone', 
+                    image: 'assets/project-capstone.webp', 
+                    title: 'Multi-Industry Analytics Sprint', 
+                    summary: 'A collection of solutions to critical business problems across four distinct industries: Retail, Real Estate, Insurance, and Finance completed as part of my MSc Big Data Analytics program.', 
+                    tags: [
+                        {name: 'SAS', icon: 'fas fa-cogs'}, 
+                        {name: 'Hypothesis Testing', icon: 'fas fa-vial'}, 
+                        {name: 'Regression', icon: 'fas fa-chart-line'}, 
+                        {name: 'Business Strategy', icon: 'fas fa-lightbulb'}
+                    ], 
+                    challenge: 'The core challenge was to simulate a high-pressure consulting environment by embedding into four distinct and unfamiliar industries: Retail, Real Estate, Insurance, and Finance. In each scenario, I was tasked with moving beyond academic theory to solve a pressing business problem under a tight deadline. The goal was to translate ambiguous, real-world questions into a precise analytical strategy and deliver actionable recommendations with clear financial and strategic consequences.', 
+                    process: [
+                        '**Retail ROI Analysis:** Used Hypothesis Testing (T-tests & Wilcoxon) in SAS to evaluate the financial impact of a new sales training program, providing a clear "Go/No-Go" decision to prevent a costly, ineffective company-wide rollout.',
+                        '**Real Estate Investment Modeling:** Built a Multiple Regression model to identify the key drivers of property income. This replaced a slow, subjective survey process with a rapid, data-driven tool for screening potential investments.',
+                        '**Insurance Risk Re-engineering:** Diagnosed and corrected a flawed linear model suffering from heteroscedasticity. By applying a log-linear transformation, I created a statistically valid model that accurately priced risk, preventing the company from under-pricing high-risk customers.',
+                        '**Financial Services Customer Segmentation:** Employed a Chi-Square test to validate the hypothesis that younger customers posed a higher risk of late loan payments. This provided the statistical certainty needed to develop targeted risk mitigation policies.'
+                    ], 
+                    outcome: 'This portfolio of projects demonstrates a consistent ability to deliver measurable business value through data. Key impacts include: preventing unnecessary spending on low-ROI initiatives, creating strategic frameworks for smarter investment, mitigating financial exposure by correcting flawed risk models, and informing new policies that reduce default rates.',
+                    links: { pdf: 'assets/msc_case_studies.pdf' } 
+                },
                 { 
                     id: 'atliq-hardware', 
                     image: 'assets/project1.webp', 
@@ -145,12 +152,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     outcome: 'The Random Forest model achieved the highest accuracy of 94% in predicting stroke risk. The analysis confirmed that hypertension, high BMI, and smoking were the most significant predictors. The model serves as a proof-of-concept for a clinical decision support tool.',
                     links: { github: 'https://github.com/syedtaizeem/stroke-data-analytics/' } 
                 }
+            ],
+            contactDetails: [
+                { type: 'Location', value: 'London, United Kingdom', icon: 'fas fa-map-marker-alt' },
+                { type: 'Email', value: 'syedtazeem40@gmail.com', href: 'mailto:syedtazeem40@gmail.com', icon: 'fas fa-envelope' },
+                { type: 'Phone', value: '07342 373748', href: 'tel:07342373748', icon: 'fas fa-phone' }
             ]
-        },
-
-        hexToRgb(hex) {
-            let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-            return result ? { r: parseInt(result[1], 16), g: parseInt(result[2], 16), b: parseInt(result[3], 16) } : null;
         },
 
         init() {
@@ -166,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cacheDOMElements() {
             this.elements = {
                 navbar: document.getElementById('navbar'),
+                scrollProgress: document.getElementById('scroll-progress'),
                 themeToggle: document.getElementById('theme-toggle'),
                 mobileMenuToggle: document.getElementById('mobile-menu-toggle'),
                 navLinks: document.getElementById('nav-links'),
@@ -173,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 toolkitContainer: document.getElementById('toolkit-container'),
                 journeyContainer: document.getElementById('journey-container'),
                 projectsContainer: document.getElementById('projects-container'),
+                contactDetailsContainer: document.getElementById('contact-details'),
                 modal: document.getElementById('project-modal'),
                 sections: document.querySelectorAll('.section'),
                 particleCanvas: document.getElementById('particle-canvas'),
@@ -190,9 +199,17 @@ document.addEventListener('DOMContentLoaded', () => {
             this.populateToolkit();
             this.populateJourney();
             this.populateProjects();
+            this.populateContactDetails();
+            this.setupToolkitInteraction();
             this.setupJourneyInteraction();
             this.setupProjectModal();
-            this.setupToolkitInteraction(); // Call the new function
+        },
+
+        handleScroll() {
+            this.elements.navbar.classList.toggle('scrolled', window.scrollY > 50);
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercentage = (window.scrollY / scrollableHeight) * 100;
+            this.elements.scrollProgress.style.width = `${scrollPercentage}%`;
         },
 
         applyInitialTheme() {
@@ -209,8 +226,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         toggleMobileMenu() {
             const isOpened = this.elements.navLinks.classList.toggle('active');
-            const icon = this.elements.mobileMenuToggle.querySelector('i');
             this.elements.mobileMenuToggle.setAttribute('aria-expanded', isOpened);
+            const icon = this.elements.mobileMenuToggle.querySelector('i');
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-times');
             document.body.style.overflow = isOpened ? 'hidden' : '';
@@ -220,10 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target.tagName === 'A' && this.elements.navLinks.classList.contains('active')) {
                 this.toggleMobileMenu();
             }
-        },
-
-        handleScroll() {
-            this.elements.navbar.classList.toggle('scrolled', window.scrollY > 50);
         },
 
         startTypingAnimation() {
@@ -250,28 +263,31 @@ document.addEventListener('DOMContentLoaded', () => {
         initIntersectionObserver() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
+                    const id = entry.target.getAttribute('id');
+                    const navLink = this.elements.navLinks.querySelector(`a[href="#${id}"]`);
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                        if (navLink) {
+                            this.elements.navLinks.querySelectorAll('a').forEach(link => link.classList.remove('active'));
+                            navLink.classList.add('active');
+                        }
                     }
                 });
-            }, { threshold: 0.1 });
+            }, { rootMargin: '-30% 0px -70% 0px' });
             this.elements.sections.forEach(section => observer.observe(section));
         },
 
-        // ** CORRECTED AND MOVED FUNCTIONS START HERE **
-
         populateToolkit() {
             if (!this.elements.toolkitContainer) return;
-            this.elements.toolkitContainer.className = 'toolkit-accordion';
             let html = '';
+            let isFirst = true;
             Object.keys(this.data.toolkit).forEach((category) => {
-                html += `<details><summary>${category}</summary><div class="toolkit-grid">`;
-                let cardIndex = 0; // Reset card index for each category for staggered animation
-                this.data.toolkit[category].forEach(skill => {
+                html += `<details class="toolkit-item" ${isFirst ? 'open' : ''}><summary>${category}</summary><div class="toolkit-grid">`;
+                this.data.toolkit[category].forEach((skill, cardIndex) => {
                     html += `<div class="skill-card" style="--delay: ${cardIndex * 30}ms"><i class="${skill.icon}"></i><span>${skill.name}</span></div>`;
-                    cardIndex++;
                 });
                 html += `</div></details>`;
+                isFirst = false;
             });
             this.elements.toolkitContainer.innerHTML = html;
         },
@@ -279,13 +295,11 @@ document.addEventListener('DOMContentLoaded', () => {
         setupToolkitInteraction() {
             const { toolkitContainer } = this.elements;
             if (!toolkitContainer) return;
-
             toolkitContainer.addEventListener('click', (e) => {
                 const summary = e.target.closest('summary');
                 if (summary) {
                     e.preventDefault();
                     const detailElement = summary.parentElement;
-
                     if (detailElement.hasAttribute('open')) {
                         detailElement.removeAttribute('open');
                     } else {
@@ -296,96 +310,99 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         },
         
-        // ** CORRECTED AND MOVED FUNCTIONS END HERE **
-        
         populateJourney() {
             const { journeyContainer } = this.elements;
             if (!journeyContainer) return;
-            let navHTML = '<ul class="journey-nav" role="tablist">';
+            
+            let navHTML = '<div class="journey-nav" role="tablist"><div class="journey-highlighter"></div>';
             let contentHTML = '<div class="journey-content-panel">';
+            
             this.data.journey.forEach((item, index) => {
-                navHTML += `<li class="journey-nav-item"><button data-journey-id="${item.id}" role="tab" aria-controls="journey-${item.id}" aria-selected="${index === 0}"><img src="${item.logo}" alt="${item.company} logo" loading="lazy" width="60" height="60"><span>${item.company}</span></button></li>`;
-                let accomplishmentsHTML = '<div class="journey-accordion">';
-                if (item.accomplishments) {
-                    item.accomplishments.forEach((group) => {
-                        accomplishmentsHTML += `
-                            <details>
-                                <summary>${group.category}</summary>
-                                <div class="accomplishment-group">
-                                    ${group.points.map(point => `<div class="accomplishment-item">${point}</div>`).join('')}
-                                </div>
-                            </details>`;
+                const typeIcon = item.type === 'work' ? 'fa-briefcase' : 'fa-graduation-cap';
+                navHTML += `<button class="journey-nav-item" data-journey-id="${item.id}" role="tab" aria-controls="journey-${item.id}" aria-selected="${index === 0}"><img src="${item.logo}" alt="${item.company} logo" loading="lazy" width="40" height="40"><span>${item.company}</span></button>`;
+                
+                let accomplishmentsHTML = '';
+                if (item.accomplishments && item.accomplishments.length > 0) {
+                    item.accomplishments.forEach((group, groupIndex) => {
+                        accomplishmentsHTML += `<details class="accomplishment-group" ${groupIndex === 0 ? 'open' : ''}><summary>${group.category}</summary><div class="accomplishment-content">${group.points.map(point => `<div class="accomplishment-item">${point}</div>`).join('')}</div></details>`;
                     });
                 }
-                accomplishmentsHTML += '</div>';
-                contentHTML += `<div class="journey-detail" id="journey-${item.id}" data-journey-id="${item.id}" role="tabpanel"><h3>${item.title}</h3><p class="company">${item.company}</p><p class="date">${item.date}</p>${accomplishmentsHTML}</div>`;
+
+                contentHTML += `<div class="journey-detail" id="journey-${item.id}" data-journey-id="${item.id}" role="tabpanel"><h3><i class="fas ${typeIcon}"></i> ${item.title}</h3><p class="company">${item.company}</p><p class="date">${item.date}</p><div class="journey-expanders">${accomplishmentsHTML}</div></div>`;
             });
-            navHTML += '</ul>';
+            navHTML += '</div>';
             contentHTML += '</div>';
             journeyContainer.innerHTML = navHTML + contentHTML;
-            journeyContainer.querySelector('.journey-nav-item button').classList.add('active');
+
+            journeyContainer.querySelector('.journey-nav-item').classList.add('active');
             journeyContainer.querySelector('.journey-detail').classList.add('active');
+
+            setTimeout(() => this.updateJourneyHighlighter(), 100);
+        },
+
+        updateJourneyHighlighter() {
+            if (window.innerWidth < 768) return; 
+            const { journeyContainer } = this.elements;
+            const highlighter = journeyContainer.querySelector('.journey-highlighter');
+            const activeButton = journeyContainer.querySelector('.journey-nav-item.active');
+            if (highlighter && activeButton) {
+                highlighter.style.transform = `translateY(${activeButton.offsetTop}px)`;
+                highlighter.style.height = `${activeButton.offsetHeight}px`;
+            }
         },
 
         setupJourneyInteraction() {
             const { journeyContainer } = this.elements;
             if (!journeyContainer) return;
-            const contentPanel = journeyContainer.querySelector('.journey-content-panel');
 
             journeyContainer.addEventListener('click', (e) => {
-                const button = e.target.closest('button');
+                const button = e.target.closest('.journey-nav-item');
                 if (button) {
                     const id = button.dataset.journeyId;
-                    const targetDetail = journeyContainer.querySelector(`.journey-detail[data-journey-id="${id}"]`);
-                    journeyContainer.querySelectorAll('.journey-nav-item button').forEach(btn => { btn.classList.remove('active'); btn.setAttribute('aria-selected', 'false'); });
+                    journeyContainer.querySelectorAll('.journey-nav-item').forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
                     button.classList.add('active');
                     button.setAttribute('aria-selected', 'true');
-                    journeyContainer.querySelectorAll('.journey-detail').forEach(detail => detail.classList.remove('active'));
                     
+                    this.updateJourneyHighlighter(); 
+
+                    journeyContainer.querySelectorAll('.journey-detail').forEach(detail => detail.classList.remove('active'));
+                    const targetDetail = journeyContainer.querySelector(`.journey-detail[data-journey-id="${id}"]`);
                     if (targetDetail) {
                         targetDetail.classList.add('active');
-                        contentPanel.scrollTo({ top: 0, behavior: 'smooth' });
-                    }
-                }
-
-                const summary = e.target.closest('summary');
-                if (summary) {
-                    e.preventDefault();
-                    const detailElement = summary.parentElement;
-                    const accordion = summary.closest('.journey-accordion');
-                    
-                    if (detailElement.hasAttribute('open')) {
-                        detailElement.removeAttribute('open');
-                    } else {
-                        accordion.querySelectorAll('details').forEach(d => d.removeAttribute('open'));
-                        detailElement.setAttribute('open', '');
                     }
                 }
             });
+            window.addEventListener('resize', () => this.updateJourneyHighlighter());
         },
-
+        
         populateProjects() {
             const { projectsContainer } = this.elements;
             if (!projectsContainer) return;
             projectsContainer.innerHTML = this.data.projects.map(project => {
                 const tagsHTML = project.tags.map(tag => `<span class="tag"><i class="${tag.icon}"></i> ${tag.name}</span>`).join('');
                 let buttonsHTML = `<button class="btn btn-primary" data-project-id="${project.id}"><i class="fas fa-eye"></i> View Case Study</button>`;
-                if (project.links.ppt || project.links.report) {
-                    const downloadLink = project.links.ppt || project.links.report;
-                    const buttonText = project.links.ppt ? "Download PDF" : "Download Report";
+                
+                const downloadLink = project.links.ppt || project.links.report || project.links.pdf;
+                if (downloadLink) {
+                    let buttonText = "Download PDF";
+                    if (project.id === 'msc-capstone') buttonText = "Download Case Studies";
+                    else if (project.links.report) buttonText = "Download Report";
+                    
                     buttonsHTML += `<a href="${downloadLink}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" download><i class="fas fa-file-pdf"></i> ${buttonText}</a>`;
                 }
                 
-                return `
-                    <div class="project-card">
-                        <div class="project-image-wrapper"><img src="${project.image}" alt="${project.title}" class="project-image" loading="lazy" width="1200" height="900"></div>
-                        <div class="project-content">
-                            <h3>${project.title}</h3>
-                            <p>${project.summary}</p>
-                            <div class="project-tags">${tagsHTML}</div>
-                            <div class="project-buttons">${buttonsHTML}</div>
-                        </div>
-                    </div>`;
+                return `<div class="project-card"><div class="project-image-wrapper"><img src="${project.image}" alt="${project.title}" class="project-image" loading="lazy" width="1200" height="900"></div><div class="project-content"><h3>${project.title}</h3><p>${project.summary}</p><div class="project-tags">${tagsHTML}</div><div class="project-buttons">${buttonsHTML}</div></div></div>`;
+            }).join('');
+        },
+
+        populateContactDetails() {
+            if (!this.elements.contactDetailsContainer) return;
+            this.elements.contactDetailsContainer.innerHTML = this.data.contactDetails.map(detail => {
+                const valueHTML = detail.href ? `<a href="${detail.href}">${detail.value}</a>` : `<a>${detail.value}</a>`;
+                return `<div class="detail-item"><i class="${detail.icon} icon"></i><div><span>${detail.type}</span>${valueHTML}</div></div>`;
             }).join('');
         },
         
@@ -393,54 +410,41 @@ document.addEventListener('DOMContentLoaded', () => {
             const { projectsContainer, modal } = this.elements;
             if (!projectsContainer || !modal) return;
             let lastFocusedElement;
-
             const openModal = (projectId) => {
                 const project = this.data.projects.find(p => p.id === projectId);
                 if (!project) return;
-                
                 let linksHTML = '';
                 if (project.links) {
                     if (project.links.github) { linksHTML += `<a href="${project.links.github}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>`; }
-                    if (project.links.ppt) { linksHTML += `<a href="${project.links.ppt}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" download><i class="fas fa-file-pdf"></i> Download PDF</a>`; }
-                    if (project.links.report) { linksHTML += `<a href="${project.links.report}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" download><i class="fas fa-file-alt"></i> Download Report</a>`; }
+                    const downloadLink = project.links.ppt || project.links.report || project.links.pdf;
+                    if (downloadLink) {
+                        let buttonText = "Download PDF";
+                        if (project.id === 'msc-capstone') buttonText = "Download Case Studies";
+                        else if (project.links.report) buttonText = "Download Report";
+                        linksHTML += `<a href="${downloadLink}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" download><i class="fas fa-file-pdf"></i> ${buttonText}</a>`;
+                    }
                 }
-                
-                let processHTML = project.process.map(item => `<li>${item}</li>`).join('');
-
-                let modalHTML = `
-                    <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-                    <div class="modal-body">
-                        <h2 id="modal-title">${project.title}</h2>
-                        ${project.embedCode ? `<h4>Interactive Dashboard</h4>${project.embedCode}` : ''}
-                        <h4>The Challenge</h4><p>${project.challenge}</p>
-                        <h4>My Process</h4><ul>${processHTML}</ul>
-                        <h4>Outcome & Impact</h4><p>${project.outcome}</p>
-                        <div class="modal-links">${linksHTML}</div>
-                    </div>`;
-
+                let processHTML = project.process.map(item => `<li>${item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</li>`).join('');
+                let modalHTML = `<button class="modal-close-btn" aria-label="Close modal">&times;</button><div class="modal-body"><h2 id="modal-title">${project.title}</h2>${project.embedCode ? `<h4>Interactive Dashboard</h4>${project.embedCode}` : ''}<h4>The Challenge</h4><p>${project.challenge}</p><h4>My Process</h4><ul>${processHTML}</ul><h4>Outcome & Impact</h4><p>${project.outcome}</p><div class="modal-links">${linksHTML}</div></div>`;
                 modal.querySelector('.modal-content').innerHTML = modalHTML;
                 lastFocusedElement = document.activeElement;
                 modal.classList.add('is-open');
                 document.body.style.overflow = 'hidden';
-                
                 const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]), iframe');
                 const firstElement = focusableElements[0];
                 const lastElement = focusableElements[focusableElements.length - 1];
                 if (firstElement) firstElement.focus();
-                
                 modal.addEventListener('keydown', function trapFocus(e) {
                     if (e.key !== 'Tab') return;
                     if (e.shiftKey) { if (document.activeElement === firstElement) { lastElement.focus(); e.preventDefault(); } } 
                     else { if (document.activeElement === lastElement) { firstElement.focus(); e.preventDefault(); } }
                 });
             };
-
             const closeModal = () => {
                 modal.classList.remove('is-open');
                 document.body.style.overflow = 'auto';
                 if (lastFocusedElement) lastFocusedElement.focus();
             };
-
             projectsContainer.addEventListener('click', e => {
                 const button = e.target.closest('button[data-project-id]');
                 if (button) openModal(button.dataset.projectId);
@@ -453,6 +457,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         },
 
+        hexToRgb(hex) {
+            let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? { r: parseInt(result[1], 16), g: parseInt(result[2], 16), b: parseInt(result[3], 16) } : null;
+        },
+
         setupParticleBackground() {
             const canvas = this.elements.particleCanvas;
             const self = this;
@@ -461,7 +470,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const ctx = canvas.getContext('2d');
             let particlesArray;
-
             class Particle {
                 constructor(x, y, dirX, dirY, size) { this.x = x; this.y = y; this.directionX = dirX; this.directionY = dirY; this.size = size; }
                 draw() {
@@ -485,14 +493,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     this.draw();
                 }
             }
-
-            const setupCanvas = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; init(); };
+            const setupCanvas = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; initParticles(); };
             const mouse = { x: null, y: null, radius: (window.innerHeight / 100) * (window.innerWidth / 100) };
             window.addEventListener('resize', setupCanvas);
             window.addEventListener('mousemove', (event) => { mouse.x = event.x; mouse.y = event.y; });
             window.addEventListener('mouseout', () => { mouse.x = null; mouse.y = null; });
-            
-            function init() {
+            function initParticles() {
                 particlesArray = [];
                 let numParticles = window.innerWidth < 768 ? 40 : 80;
                 for (let i = 0; i < numParticles; i++) {
@@ -504,7 +510,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     particlesArray.push(new Particle(x, y, dirX, dirY, size));
                 }
             }
-
             function connect() {
                 let opacity = 1;
                 for (let a = 0; a < particlesArray.length; a++) {
@@ -527,14 +532,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             }
-            
             function animate() {
                 requestAnimationFrame(animate);
                 ctx.clearRect(0, 0, innerWidth, innerHeight);
                 for (let i = 0; i < particlesArray.length; i++) { particlesArray[i].update(); }
                 connect();
             }
-            
             setupCanvas();
             animate();
         }

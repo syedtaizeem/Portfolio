@@ -3,19 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Syed Taizeem, a Data & Business Intelligence Analyst specializing in transforming data into actionable insights.">
     
+    <!-- Primary Meta Tags -->
     <title>Syed Taizeem - Data & Business Intelligence Analyst</title>
+    <meta name="title" content="Syed Taizeem - Data & Business Intelligence Analyst">
+    <meta name="description" content="Portfolio of Syed Taizeem, a Data & Business Intelligence Analyst specializing in transforming data into actionable insights.">
+    <meta name="keywords" content="Syed Taizeem, Data Analyst, BI Analyst, Business Intelligence, Python, SQL, Power BI, Tableau, Portfolio">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdomain.com/"> <!-- TODO: Replace with your live domain -->
+    <meta property="og:title" content="Syed Taizeem - Data & Business Intelligence Analyst">
+    <meta property="og:description" content="Portfolio of Syed Taizeem, a Data & Business Intelligence Analyst specializing in transforming data into actionable insights.">
+    <meta property="og:image" content="https://www.yourdomain.com/assets/profile-image.webp"> <!-- TODO: Replace with the full URL to your profile image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourdomain.com/"> <!-- TODO: Replace with your live domain -->
+    <meta property="twitter:title" content="Syed Taizeem - Data & Business Intelligence Analyst">
+    <meta property="twitter:description" content="Portfolio of Syed Taizeem, a Data & Business Intelligence Analyst specializing in transforming data into actionable insights.">
+    <meta property="twitter:image" content="https://www.yourdomain.com/assets/profile-image.webp"> <!-- TODO: Replace with the full URL to your profile image -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Archivo:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Archivo:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
     <canvas id="particle-canvas"></canvas>
 
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -67,14 +85,11 @@
 
         <section id="about" class="section">
             <div class="container about-grid">
-                <div class="about-image-wrapper">
-                    <img src="assets/about-image.webp" alt="Syed Taizeem working on a laptop in a modern office." class="about-image" loading="lazy" width="500" height="600">
-                </div>
                 <div class="about-text">
                     <div class="section-title-wrapper">
                         <h2 class="section-title">About Me</h2>
                     </div>
-                    <p>I'm Syed, a data professional passionate about uncovering insights from raw information. I’m fascinated by the entire big data architecture and how each part—from data collection to storage and processing—contributes to meaningful analysis.</p>
+                    <p>I'm Syed, a data professional passionate about uncovering insights from raw information. I'm fascinated by the entire big data architecture and how each part—from data collection to storage and processing—contributes to meaningful analysis.</p>
                     <p>I specialize in turning business needs into clear analysis and presenting results through effective data storytelling. My goal is to empower teams and align stakeholder expectations by delivering actionable insights that drive success.</p>
                 </div>
             </div>
@@ -83,7 +98,7 @@
         <section id="toolkit" class="section">
             <div class="container">
                 <div class="section-title-wrapper"><h2 class="section-title">My Toolkit</h2></div>
-                <div id="toolkit-container" class="toolkit-unified-grid">
+                <div id="toolkit-container" class="toolkit-accordion">
                     <!-- Toolkit content will be dynamically inserted here by script.js -->
                 </div>
             </div>
@@ -93,7 +108,7 @@
             <div class="container">
                 <div class="section-title-wrapper"><h2 class="section-title">My Journey</h2></div>
                 <div class="journey-container" id="journey-container">
-                     <!-- Journey content (with lazy-loaded logos) will be dynamically inserted here by script.js -->
+                    <!-- Journey content will be dynamically inserted here by script.js -->
                 </div>
             </div>
         </section>
@@ -102,7 +117,7 @@
             <div class="container">
                 <div class="section-title-wrapper"><h2 class="section-title">Featured Projects</h2></div>
                 <div class="projects-grid" id="projects-container">
-                     <!-- Projects content will be dynamically inserted here by script.js -->
+                    <!-- Projects content will be dynamically inserted here by script.js -->
                 </div>
             </div>
         </section>
@@ -113,28 +128,8 @@
                  <div class="contact-grid">
                     <div class="contact-info">
                         <p>I'm currently open to new opportunities and collaborations. Whether you have a question, a project proposal, or just want to say hi, my inbox is always open. Feel free to reach out directly or use the form.</p>
-                        <div class="contact-details">
-                            <div class="detail-item">
-                                <i class="fas fa-map-marker-alt icon"></i>
-                                <div>
-                                    <span>Location</span>
-                                    <a>London, United Kingdom</a>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-envelope icon"></i>
-                                <div>
-                                    <span>Email</span>
-                                    <a href="mailto:syedtazeem40@gmail.com">syedtazeem40@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-phone icon"></i>
-                                <div>
-                                    <span>Phone</span>
-                                    <a href="tel:07342373748">07342 373748</a>
-                                </div>
-                            </div>
+                        <div class="contact-details" id="contact-details">
+                            <!-- Contact details will be inserted here by script.js -->
                         </div>
                     </div>
                     <form action="https://formspree.io/f/mgvlakpg" method="POST" class="contact-form">
@@ -162,9 +157,9 @@
             <ul class="social-links">
                 <li><a href="https://github.com/syedtaizeem" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github"></i></a></li>
                 <li><a href="https://linkedin.com/in/syed-taizeem" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://x.com/syedtaizeem" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile"><i class="fab fa-twitter"></i></a></li>
             </ul>
-            <p>&copy; 2025 Designed & Built by Syed Taizeem</p>
+            <p>&copy; 2024 Designed & Built by Syed Taizeem</p>
         </div>
     </footer>
 
